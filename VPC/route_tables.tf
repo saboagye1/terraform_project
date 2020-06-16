@@ -7,7 +7,17 @@ resource "aws_route_table" "dev" {
 }
 
 
-resource "aws_subnet_association" "dev" {
-  subnet_id = "${aws_subnet_id.dev}"
-  aws_route_table = "${aws_route_table.dev}"
+resource "aws_subnet_association" "dev1" {
+  subnet_id = "${aws_subnet.dev1.id}"
+  aws_route_table = "${aws_route_table.dev.id}"
+}
+
+resource "aws_subnet_association" "dev2" {
+  subnet_id = "${aws_subnet.dev2.id}"
+  aws_route_table = "${aws_route_table.dev.id}"
+}
+
+resource "aws_subnet_association" "dev3" {
+  subnet_id = "${aws_subnet.dev3.id}"
+  aws_route_table = "${aws_route_table.dev.id}"
 }
