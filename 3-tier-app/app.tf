@@ -6,6 +6,7 @@ resource "aws_instance" "web" {
   subnet_id = "${data.terraform_remote_state.dev.Public_Subnet1}"
 }
 
+# creates asg with lunch configuration
 module "wordpress" {
   source = "terraform-aws-modules/autoscaling/aws"
 
