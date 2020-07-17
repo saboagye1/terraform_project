@@ -1,6 +1,13 @@
 # Provide a region for vpc
 region = "eu-west-1"
 
+
+# Choose AZs to create subnets
+
+az1      = "us-east-1a"
+az2      = "us-east-1b"
+az3      = "us-east-1c"
+
 #This is used for vpc cidr block
 
 cidr_block "10.0.0.0/10"
@@ -19,11 +26,3 @@ cidr_block3_private = "10.0.103.0/24"
 s3_folder_project   = "tower"
 s3_folder_type      = "tools"
 s3_folder_file      = "tower.tfstate"
-
-
-
-# Choose AZs to create subnets
-
-az1      = "us-east-1a"
-az2      = "us-east-1b"
-az3      = "us-east-1c"
